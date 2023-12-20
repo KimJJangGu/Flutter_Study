@@ -12,29 +12,31 @@ class _StopWatchScreenState extends State<StopWatchScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('스톱워치'),
+        title: const Text('스톱워치'),
       ),
       body: Column(
         children: [
+          const Spacer(),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               FloatingActionButton(
                 backgroundColor: Colors.blue,
                 onPressed: () {},
-                child: Icon(Icons.refresh),
+                child: const Icon(Icons.refresh),
               ),
               FloatingActionButton(
                 onPressed: () {},
-                child: Icon(Icons.play_arrow),
+                child: const Icon(Icons.play_arrow),
               ),
               FloatingActionButton(
                 backgroundColor: Colors.green,
                 onPressed: () {},
-                child: Icon(Icons.add),
+                child: const Icon(Icons.add),
               ),
             ],
           ),
+          const SizedBox(height: 30,)
         ],
       ),
     );
