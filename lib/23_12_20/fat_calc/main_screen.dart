@@ -1,6 +1,7 @@
 // 비만도 계산기
 import 'package:flutter/material.dart';
-import '../result/result_screen.dart';
+import 'package:flutter_study/23_12_20/fat_calc/result/result_screen.dart';
+
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
