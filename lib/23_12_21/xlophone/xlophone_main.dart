@@ -93,7 +93,8 @@ class _XlophoneState extends State<Xlophone> {
       child: Scaffold(
         backgroundColor: Colors.transparent,
         appBar: AppBar(
-          title: const Text('실로폰'),
+          backgroundColor: Colors.blue.shade200,
+          title: const Text('짱구는 못말려'),
         ),
         body: _isLoading
             ? const Center(
@@ -142,10 +143,12 @@ class _XlophoneState extends State<Xlophone> {
   }
 
   Widget gunban(String text, Color color, int soundId) {
-    return GestureDetector(
+    return InkWell(
       onTap: () {
         pool.play(soundId);
       },
+      splashColor: Colors.yellow, // 터치 시 물결 효과 색상
+      highlightColor: Colors.blue, // 터치 된 상태에서 색상
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15),
@@ -154,9 +157,12 @@ class _XlophoneState extends State<Xlophone> {
         ),
         width: 50,
         height: double.infinity,
-        child: Image.asset(
-          'assets/pjm.png',
-          fit: BoxFit.cover,
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(15),
+          child: Image.asset(
+            'assets/pjm.png',
+            fit: BoxFit.cover,
+          ),
         ),
       ),
     );
