@@ -6,13 +6,10 @@ class StarBucksShopPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('둘러보기'),
-      ),
       body: Center(
         child: Image.asset(
-          'assets/jgw.jfif',
-          fit: BoxFit.cover,
+          'assets/bm1.png',
+          fit: BoxFit.fill,
         ),
       ),
     );

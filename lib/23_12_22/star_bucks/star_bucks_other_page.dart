@@ -7,11 +7,11 @@ class StarBucksOtherPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('기타'),
+        title: const Text('이제 없음'),
       ),
       body: Center(
         child: Image.asset(
-          'assets/jgw.jfif',
+          'assets/jjang.jpg',
           fit: BoxFit.cover,
         ),
       ),

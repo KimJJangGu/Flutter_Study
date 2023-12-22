@@ -6,12 +6,9 @@ class StarBucksPayPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('돈 줘'),
-      ),
       body: Center(
         child: Image.asset(
-          'assets/jgw.jfif',
+          'assets/stbpay.jpg',
           fit: BoxFit.cover,
         ),
       ),

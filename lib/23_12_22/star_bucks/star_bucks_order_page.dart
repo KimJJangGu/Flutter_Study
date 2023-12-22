@@ -6,12 +6,9 @@ class StarBucksOrderPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('주문'),
-      ),
       body: Center(
         child: Image.asset(
-          'assets/jgw.jfif',
+          'assets/baemin1.png',
           fit: BoxFit.cover,
         ),
       ),
