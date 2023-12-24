@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_study/23_12_24/todo_list/todo.dart';
 import 'package:flutter_study/23_12_24/todo_list/todo_list_screen.dart';
-import 'package:hive/hive.dart';
-import 'package:hive_flutter/adapters.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
 // await를 신경쓰지 않고 바로 쓸 수 있도록 쉽게 코드 수정, late로 나중에 값을 초기화 하겠다고 선언
 // 좋은 방법은 아니나, 앱을 만드는 데에는 지장이 없음
@@ -17,13 +16,13 @@ Future<void> main() async {
   Hive.registerAdapter(TodoAdapter());
   //DB를 사용하는 코드, DB를 Box로 표현
   // todos 객체로 DB에 접근 가능
-  await Hive.openBox<Todo>('todolist.db');
+  todos = await Hive.openBox<Todo>('todolist.db');
   // 앱을 실행
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -33,9 +32,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
-
       ),
-      home: TodoListScreen(),
+      home: const TodoListScreen(),
     );
   }
 }
